@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.6', '3.7', '3.8']
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     
       # Runs a single command using the runners shell, using run:
@@ -30,7 +30,7 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
           
